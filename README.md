@@ -82,3 +82,8 @@ The live bot stores participant Telegram IDs and watering timestamps internally 
 The original model scans the full watering history. Its 100,000-record cloud test hit a query-read limit; it is a prototype, not a proven large-scale design. The experiment incurred no hosting charge in early access. Public future pricing and a permanent free tier are not established by these tests.
 
 References: [Telegram Serverless](https://core.telegram.org/bots/serverless), [Mini Apps](https://core.telegram.org/bots/webapps#serverless).
+
+## Published articles
+
+- [Русская статья на Хабре](https://habr.com/ru/articles/1095716/)
+- [English article on DEV](https://dev.to/jabrailkhalil/telegram-serverless-vs-two-vpss-what-the-benchmarks-actually-show-44p8)

@@ -24,3 +24,8 @@ node tools/preview.mjs
 Демо: http://127.0.0.1:8765/?demo=1. Оно использует localStorage и не трогает облачный сад. Для настоящего развёртывания получите доступ Serverless у своего бота через @BotFather, установите зависимости, выполните npx tgcloud login, push и отдельно migrate. Адрес MINI_APP_URL замените на адрес своей копии. Подробные команды находятся в [английском README](README.md).
 
 Опубликованы код, синтетические данные benchmark и агрегаты. Токенов, SSH-ключей, адресов VPS, журналов ручных пользователей и реальных Telegram ID участников в репозитории нет. Скриншоты предоставлены автором. Иллюстрации интерфейса явно отмечены как иллюстрации.
+
+## Опубликованные статьи
+
+- [Русская статья на Хабре](https://habr.com/ru/articles/1095716/)
+- [English article on DEV](https://dev.to/jabrailkhalil/telegram-serverless-vs-two-vpss-what-the-benchmarks-actually-show-44p8)
