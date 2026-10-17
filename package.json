@@ -1,0 +1,13 @@
+{
+  "name": "telegram-garden",
+  "private": true,
+  "type": "module",
+  "devDependencies": { "@tgcloud/cli": "0.2.0" },
+  "scripts": {
+    "deploy": "tgcloud push",
+    "status": "tgcloud status",
+    "run": "tgcloud run",
+    "test": "node --test tests/garden.test.mjs",
+    "preview": "node tools/preview.mjs"
+  }
+}

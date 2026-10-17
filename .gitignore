@@ -1,0 +1,9 @@
+.tgcloud/
+node_modules/
+.env
+.env.*
+work/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log

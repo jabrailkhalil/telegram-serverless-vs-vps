@@ -1,0 +1,1625 @@
+{
+  "startedAt": "2026-10-17T18:55:24.569Z",
+  "finishedAt": "2026-10-17T19:13:57.503Z",
+  "pilot": false,
+  "provenance": {
+    "nativeDatabase": "supplement.json: /var/tmp ext4, WAL/FULL",
+    "pureJavaScript": "raw.json: 30 timed blocks per task and environment; independent of database location",
+    "cloudDatabase": "raw.json: three completed rounds, failed large scans retained",
+    "concurrencyAndHttp": "supplement.json: bounded concurrency and outbound HTTP",
+    "queryBoundaries": "query-boundaries.json",
+    "exploratory": "raw.json and segment-*.json retain preliminary /tmp database and management API experiments. Do not pool their native DB timings with the persistent-disk control."
+  },
+  "observedLimits": [
+    {
+      "error": "Uncaught exception: Error: Sqlite query rows_written limit exceeded",
+      "observedAt": "2026-10-17T18:57:19.573Z"
+    },
+    {
+      "error": "Too many requests: retry after 17",
+      "observedAt": "2026-10-17T19:00:22.575Z"
+    },
+    {
+      "error": "Too many requests: retry after 16",
+      "scope": "developer management API, not bot throughput"
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "fi": {
+      "cleaned": true
+    },
+    "de": {
+      "cleaned": true
+    },
+    "telegram": {
+      "cleaned": true,
+      "runtimeReportedMs": 46.770572662354,
+      "controllerRoundTripMs": 430.1553000000131
+    }
+  },
+  "productionBefore": {
+    "waters": 18
+  },
+  "productionAfter": {
+    "waters": 18
+  },
+  "finalProbe": {
+    "garden": {
+      "waters": 18
+    },
+    "temporaryTables": []
+  },
+  "queryBoundaries": {
+    "startedAt": "2026-10-17T19:13:29.493Z",
+    "telegram": {
+      "write": {
+        "rows10000": {
+          "before": 0,
+          "after": 10000,
+          "affected": 10000
+        },
+        "rows10001": {
+          "before": 0,
+          "after": 0,
+          "error": "Sqlite query rows_written limit exceeded"
+        },
+        "twoStatements": {
+          "rows": 12000
+        },
+        "cleaned": true
+      },
+      "read": {
+        "rows1": {
+          "result": {
+            "total": 1
+          }
+        },
+        "rows9999": {
+          "result": {
+            "total": 49995000
+          }
+        },
+        "rows10000": {
+          "result": {
+            "total": 50005000
+          }
+        },
+        "rows10001": {
+          "result": {
+            "total": 50015001
+          }
+        },
+        "rows19999": {
+          "result": {
+            "total": 199990000
+          }
+        },
+        "rows20000": {
+          "result": {
+            "total": 200010000
+          }
+        },
+        "rows20001": {
+          "result": {
+            "total": 200030001
+          }
+        },
+        "rows49999": {
+          "result": {
+            "total": 1249975000
+          }
+        },
+        "rows50000": {
+          "result": {
+            "total": 1250025000
+          }
+        },
+        "rows50001": {
+          "error": "Sqlite query rows_read limit exceeded"
+        },
+        "rows99999": {
+          "error": "Sqlite query rows_read limit exceeded"
+        },
+        "rows100000": {
+          "error": "Sqlite query rows_read limit exceeded"
+        },
+        "rows100001": {
+          "error": "Sqlite query rows_read limit exceeded"
+        },
+        "indexedLookup": {
+          "value": 100001
+        },
+        "cleaned": true
+      }
+    },
+    "native": {
+      "fi": {
+        "sqlite": "3.46.1",
+        "writes": {
+          "10000": 10000,
+          "10001": 10001
+        }
+      },
+      "de": {
+        "sqlite": "3.37.2",
+        "writes": {
+          "10000": 10000,
+          "10001": 10001
+        }
+      }
+    },
+    "finishedAt": "2026-10-17T19:13:57.503Z",
+    "finalProbe": {
+      "garden": {
+        "waters": 18
+      },
+      "temporaryTables": []
+    },
+    "deployedRevisionUnchanged": true,
+    "deployedSourcesUnchanged": true
+  },
+  "deployedRevisionUnchanged": true,
+  "deployedSourcesUnchanged": true,
+  "environments": {
+    "fi": {
+      "micro": {
+        "select1": {
+          "n": 150,
+          "minMs": 0.0024439999999685824,
+          "p50Ms": 0.0033570000000509026,
+          "p95Ms": 0.008294999999975516,
+          "p99Ms": 0.017483000000083848,
+          "maxMs": 0.018665000000055443,
+          "meanMs": 0.004462293333328943
+        },
+        "indexedRead": {
+          "n": 150,
+          "minMs": 0.007484000000204105,
+          "p50Ms": 0.00928699999985838,
+          "p95Ms": 0.026609999999891443,
+          "p99Ms": 0.048040000000014516,
+          "maxMs": 0.11077899999997953,
+          "meanMs": 0.01234697333333467
+        },
+        "increment": {
+          "n": 150,
+          "minMs": 0.18269400000008318,
+          "p50Ms": 0.613456000000042,
+          "p95Ms": 1.027798999999959,
+          "p99Ms": 1.4291860000000725,
+          "maxMs": 1.874416999999994,
+          "meanMs": 0.6093011999999953
+        },
+        "write32Separate": {
+          "n": 30,
+          "minMs": 9.158807999999226,
+          "p50Ms": 18.16000999999983,
+          "p95Ms": 32.074798999999985,
+          "p99Ms": 37.500395000000026,
+          "maxMs": 37.500395000000026,
+          "meanMs": 17.46817416666666
+        },
+        "write32Batch": {
+          "n": 30,
+          "minMs": 0.24782800000048155,
+          "p50Ms": 0.6904530000001614,
+          "p95Ms": 0.9856190000000424,
+          "p99Ms": 1.487474999999904,
+          "maxMs": 1.487474999999904,
+          "meanMs": 0.6954829666666834
+        }
+      },
+      "pure": {
+        "cpu": {
+          "batchRuntime": {
+            "n": 30,
+            "minMs": 37.5100639999946,
+            "p50Ms": 38.468080999999074,
+            "p95Ms": 80.02496999999858,
+            "p99Ms": 89.49141900000541,
+            "maxMs": 89.49141900000541,
+            "meanMs": 42.39869586666658
+          },
+          "normalizedPerIteration": {
+            "n": 30,
+            "minMs": 1.87550319999973,
+            "p50Ms": 1.9234040499999536,
+            "p95Ms": 4.001248499999929,
+            "p99Ms": 4.47457095000027,
+            "maxMs": 4.47457095000027,
+            "meanMs": 2.119934793333329
+          },
+          "blocks": 30,
+          "iterations": 600,
+          "iterationsPerBlock": 20,
+          "checksums": [
+            2225220677
+          ]
+        },
+        "json": {
+          "batchRuntime": {
+            "n": 30,
+            "minMs": 136.80140099999699,
+            "p50Ms": 149.1951410000038,
+            "p95Ms": 185.35025000000314,
+            "p99Ms": 237.0447439999989,
+            "maxMs": 237.0447439999989,
+            "meanMs": 154.82219683333267
+          },
+          "normalizedPerIteration": {
+            "n": 30,
+            "minMs": 27.360280199999398,
+            "p50Ms": 29.839028200000758,
+            "p95Ms": 37.07005000000063,
+            "p99Ms": 47.40894879999978,
+            "maxMs": 47.40894879999978,
+            "meanMs": 30.964439366666525
+          },
+          "blocks": 30,
+          "iterations": 150,
+          "iterationsPerBlock": 5,
+          "jsonBytes": 530047,
+          "checksums": [
+            40950
+          ]
+        }
+      },
+      "scale": {
+        "1000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 0.19816399999945133,
+            "p50Ms": 0.2614739999999074,
+            "p95Ms": 0.3888329999999769,
+            "p99Ms": 0.44344700000056037,
+            "maxMs": 0.44344700000056037,
+            "meanMs": 0.2775448222222318
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 0.18194399999993038,
+            "p50Ms": 0.28937500000029104,
+            "p95Ms": 0.42211700000007113,
+            "p99Ms": 0.5473320000000967,
+            "maxMs": 0.5473320000000967,
+            "meanMs": 0.29879003333335274
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 0.48369300000013027,
+            "p50Ms": 0.8707629999998971,
+            "p95Ms": 1.2195810000002894,
+            "p99Ms": 1.4611869999998817,
+            "maxMs": 1.4611869999998817,
+            "meanMs": 0.8683713333333799
+          }
+        },
+        "10000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 1.8073389999999563,
+            "p50Ms": 2.0501579999981914,
+            "p95Ms": 2.8047409999999218,
+            "p99Ms": 4.0226089999996475,
+            "maxMs": 4.0226089999996475,
+            "meanMs": 2.1548140111110015
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 1.7983939999994618,
+            "p50Ms": 2.2641010000006645,
+            "p95Ms": 3.279797999999573,
+            "p99Ms": 3.5477129999999306,
+            "maxMs": 3.5477129999999306,
+            "meanMs": 2.3945298222221227
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 2.551672999999937,
+            "p50Ms": 3.0248460000002524,
+            "p95Ms": 4.084945999999036,
+            "p99Ms": 4.550994999999602,
+            "maxMs": 4.550994999999602,
+            "meanMs": 3.1471678166664483
+          }
+        },
+        "100000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 20.469285999999556,
+            "p50Ms": 22.98276799999985,
+            "p95Ms": 27.076900000000023,
+            "p99Ms": 28.983067999999548,
+            "maxMs": 28.983067999999548,
+            "meanMs": 23.34926685555541
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 19.952080999999453,
+            "p50Ms": 22.702407999999195,
+            "p95Ms": 31.063211000000592,
+            "p99Ms": 33.77155100000164,
+            "maxMs": 33.77155100000164,
+            "meanMs": 24.197056177777732
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 20.76444199999969,
+            "p50Ms": 23.125487000001158,
+            "p95Ms": 28.478244999998424,
+            "p99Ms": 36.56758499999705,
+            "maxMs": 36.56758499999705,
+            "meanMs": 23.884558299999995
+          }
+        }
+      },
+      "scaleErrors": {
+        "1000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        },
+        "10000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        },
+        "100000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        }
+      },
+      "concurrency": {
+        "1": {
+          "indexedRead": {
+            "execution": {
+              "n": 5,
+              "minMs": 0.0885469999993802,
+              "p50Ms": 0.107904000000417,
+              "p95Ms": 0.218101000002207,
+              "p99Ms": 0.218101000002207,
+              "maxMs": 0.218101000002207,
+              "meanMs": 0.12578339999963645
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 0.3023399999983667,
+              "p50Ms": 0.37042899999869405,
+              "p95Ms": 2.330064999998285,
+              "p99Ms": 2.330064999998285,
+              "maxMs": 2.330064999998285,
+              "meanMs": 0.7623039999991306
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 5,
+              "minMs": 1.0694279999988794,
+              "p50Ms": 1.223868000000948,
+              "p95Ms": 1.7610830000012356,
+              "p99Ms": 1.7610830000012356,
+              "maxMs": 1.7610830000012356,
+              "meanMs": 1.2758327999996255
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 1.319178000001557,
+              "p50Ms": 1.511330999997881,
+              "p95Ms": 2.022174999998242,
+              "p99Ms": 2.022174999998242,
+              "maxMs": 2.022174999998242,
+              "meanMs": 1.5560113999992609
+            }
+          }
+        },
+        "4": {
+          "indexedRead": {
+            "execution": {
+              "n": 20,
+              "minMs": 0.03895299999931012,
+              "p50Ms": 0.07050399999934598,
+              "p95Ms": 1.0018200000013167,
+              "p99Ms": 2.789713000001939,
+              "maxMs": 2.789713000001939,
+              "meanMs": 0.262479500000336
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 0.8497019999995246,
+              "p50Ms": 0.9083339999997406,
+              "p95Ms": 5.187786999998934,
+              "p99Ms": 5.187786999998934,
+              "maxMs": 5.187786999998934,
+              "meanMs": 1.7570368000000598
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 20,
+              "minMs": 0.9868310000019846,
+              "p50Ms": 3.9157169999998587,
+              "p95Ms": 9.80249399999957,
+              "p99Ms": 20.01093100000071,
+              "maxMs": 20.01093100000071,
+              "meanMs": 5.184232150000571
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 9.703034999998636,
+              "p50Ms": 10.134788999999728,
+              "p95Ms": 21.23335699999734,
+              "p99Ms": 21.23335699999734,
+              "maxMs": 21.23335699999734,
+              "meanMs": 12.410594799998217
+            }
+          }
+        },
+        "8": {
+          "indexedRead": {
+            "execution": {
+              "n": 40,
+              "minMs": 0.03660900000249967,
+              "p50Ms": 0.05666600000040489,
+              "p95Ms": 1.6275009999990289,
+              "p99Ms": 6.706111999999848,
+              "maxMs": 6.706111999999848,
+              "meanMs": 0.40365620000011404
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 1.3402480000004289,
+              "p50Ms": 1.5460860000021057,
+              "p95Ms": 40.93898300000001,
+              "p99Ms": 40.93898300000001,
+              "maxMs": 40.93898300000001,
+              "meanMs": 9.376677200001723
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 40,
+              "minMs": 1.660952999998699,
+              "p50Ms": 9.227898999997706,
+              "p95Ms": 81.92987100000028,
+              "p99Ms": 106.31053699999757,
+              "maxMs": 106.31053699999757,
+              "meanMs": 23.78645997499989
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 35.54666800000268,
+              "p50Ms": 57.92904400000407,
+              "p95Ms": 107.47676800000045,
+              "p99Ms": 107.47676800000045,
+              "maxMs": 107.47676800000045,
+              "meanMs": 68.69202660000155
+            }
+          }
+        }
+      },
+      "independent": {
+        "noop": {
+          "execution": {
+            "n": 10,
+            "minMs": 0.0028050000037183054,
+            "p50Ms": 0.003377000000909902,
+            "p95Ms": 0.004609000003256369,
+            "p99Ms": 0.004609000003256369,
+            "maxMs": 0.004609000003256369,
+            "meanMs": 0.0035806000007141845
+          },
+          "controllerRoundTrip": null,
+          "runtimeReported": {
+            "n": 10,
+            "minMs": 0.010719999998400453,
+            "p50Ms": 0.012854000000515953,
+            "p95Ms": 0.03379299999505747,
+            "p99Ms": 0.03379299999505747,
+            "maxMs": 0.03379299999505747,
+            "meanMs": 0.015083400000003166
+          }
+        },
+        "select1": {
+          "execution": null,
+          "controllerRoundTrip": null,
+          "runtimeReported": null
+        },
+        "gardenRead": {
+          "execution": null,
+          "controllerRoundTrip": null,
+          "runtimeReported": null
+        }
+      },
+      "outbound": {
+        "https://telegram.org/js/telegram-web-app.js": {
+          "allAttempts": {
+            "n": 30,
+            "minMs": 46.25810700000147,
+            "p50Ms": 54.16848000000027,
+            "p95Ms": 245.61819200000173,
+            "p99Ms": 264.64274199999636,
+            "maxMs": 264.64274199999636,
+            "meanMs": 71.24506213333346
+          },
+          "successTiming": {
+            "n": 30,
+            "minMs": 46.25810700000147,
+            "p50Ms": 54.16848000000027,
+            "p95Ms": 245.61819200000173,
+            "p99Ms": 264.64274199999636,
+            "maxMs": 264.64274199999636,
+            "meanMs": 71.24506213333346
+          },
+          "failures": 0,
+          "successes": 30,
+          "responses": [
+            {
+              "status": 200,
+              "characters": 119731
+            },
+            {
+              "status": 200,
+              "characters": 119731
+            },
+            {
+              "status": 200,
+              "characters": 119731
+            }
+          ]
+        },
+        "https://app8881637352.tgcloud.ai/": {
+          "allAttempts": {
+            "n": 30,
+            "minMs": 33.44653699999617,
+            "p50Ms": 68.73833600000216,
+            "p95Ms": 162.2170849999966,
+            "p99Ms": 267.2042349999974,
+            "maxMs": 267.2042349999974,
+            "meanMs": 78.39110796666621
+          },
+          "successTiming": {
+            "n": 30,
+            "minMs": 33.44653699999617,
+            "p50Ms": 68.73833600000216,
+            "p95Ms": 162.2170849999966,
+            "p99Ms": 267.2042349999974,
+            "maxMs": 267.2042349999974,
+            "meanMs": 78.39110796666621
+          },
+          "failures": 0,
+          "successes": 30,
+          "responses": [
+            {
+              "status": 200,
+              "characters": 2477
+            },
+            {
+              "status": 200,
+              "characters": 2477
+            },
+            {
+              "status": 200,
+              "characters": 2477
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "node": "v22.23.3",
+        "sqlite": "3.51.3",
+        "vcpus": 1,
+        "memoryMiB": 1963,
+        "freeMiB": 1214,
+        "load": [
+          1.23,
+          1.26,
+          1.25
+        ],
+        "kernel": "7.0.0-22-generic",
+        "usage": {
+          "userCPUTime": 25504,
+          "systemCPUTime": 10201,
+          "maxRSS": 50184,
+          "sharedMemorySize": 0,
+          "unsharedDataSize": 0,
+          "unsharedStackSize": 0,
+          "minorPageFault": 3101,
+          "majorPageFault": 0,
+          "swappedOut": 0,
+          "fsRead": 0,
+          "fsWrite": 24,
+          "ipcSent": 0,
+          "ipcReceived": 0,
+          "signalsCount": 0,
+          "voluntaryContextSwitches": 15,
+          "involuntaryContextSwitches": 20
+        },
+        "runtimeReportedMs": 0.6497560000000107
+      },
+      "filesystem": {
+        "filesystems": [
+          {
+            "target": "/",
+            "source": "/dev/vda2",
+            "fstype": "ext4"
+          }
+        ]
+      },
+      "counter": {
+        "value": 65,
+        "runtimeReportedMs": 0.29655900000216207
+      },
+      "concurrencyScope": "SQLite worker threads, one independent connection per worker"
+    },
+    "de": {
+      "micro": {
+        "select1": {
+          "n": 150,
+          "minMs": 0.002985000000023774,
+          "p50Ms": 0.0038179999996827974,
+          "p95Ms": 0.008004999999684514,
+          "p99Ms": 0.02063900000001695,
+          "maxMs": 0.02629899999965346,
+          "meanMs": 0.004909553333337726
+        },
+        "indexedRead": {
+          "n": 150,
+          "minMs": 0.00906699999995908,
+          "p50Ms": 0.013314999999977317,
+          "p95Ms": 0.02589799999987008,
+          "p99Ms": 0.07208499999978812,
+          "maxMs": 0.17537900000002082,
+          "meanMs": 0.015575993333328597
+        },
+        "increment": {
+          "n": 150,
+          "minMs": 0.18132999999988897,
+          "p50Ms": 0.5067399999999793,
+          "p95Ms": 3.819472000000019,
+          "p99Ms": 5.426866000000018,
+          "maxMs": 7.927596999999878,
+          "meanMs": 0.960533100000002
+        },
+        "write32Separate": {
+          "n": 30,
+          "minMs": 35.17707700000028,
+          "p50Ms": 95.47728300000017,
+          "p95Ms": 96.84087099999988,
+          "p99Ms": 101.805703,
+          "maxMs": 101.805703,
+          "meanMs": 84.19412516666665
+        },
+        "write32Batch": {
+          "n": 30,
+          "minMs": 0.25532899999961955,
+          "p50Ms": 0.5339910000000145,
+          "p95Ms": 0.7674179999999069,
+          "p99Ms": 0.9015899999999419,
+          "maxMs": 0.9015899999999419,
+          "meanMs": 0.4958119999999705
+        }
+      },
+      "pure": {
+        "cpu": {
+          "batchRuntime": {
+            "n": 30,
+            "minMs": 37.46491899999819,
+            "p50Ms": 39.12760700000217,
+            "p95Ms": 42.014271000007284,
+            "p99Ms": 45.35987400000158,
+            "maxMs": 45.35987400000158,
+            "meanMs": 39.30003899999986
+          },
+          "normalizedPerIteration": {
+            "n": 30,
+            "minMs": 1.8732459499999095,
+            "p50Ms": 1.9563803500001087,
+            "p95Ms": 2.100713550000364,
+            "p99Ms": 2.267993700000079,
+            "maxMs": 2.267993700000079,
+            "meanMs": 1.9650019499999931
+          },
+          "blocks": 30,
+          "iterations": 600,
+          "iterationsPerBlock": 20,
+          "checksums": [
+            2225220677
+          ]
+        },
+        "json": {
+          "batchRuntime": {
+            "n": 30,
+            "minMs": 159.994620999998,
+            "p50Ms": 171.04667599999812,
+            "p95Ms": 237.95909000000393,
+            "p99Ms": 247.55275200000324,
+            "maxMs": 247.55275200000324,
+            "meanMs": 184.4925487000003
+          },
+          "normalizedPerIteration": {
+            "n": 30,
+            "minMs": 31.9989241999996,
+            "p50Ms": 34.20933519999962,
+            "p95Ms": 47.591818000000785,
+            "p99Ms": 49.510550400000646,
+            "maxMs": 49.510550400000646,
+            "meanMs": 36.89850974000006
+          },
+          "blocks": 30,
+          "iterations": 150,
+          "iterationsPerBlock": 5,
+          "jsonBytes": 530047,
+          "checksums": [
+            40950
+          ]
+        }
+      },
+      "scale": {
+        "1000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 0.20631700000012643,
+            "p50Ms": 0.2532549999996263,
+            "p95Ms": 0.38929000000007363,
+            "p99Ms": 0.4677269999992859,
+            "maxMs": 0.4677269999992859,
+            "meanMs": 0.267620888888905
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 0.1836139999995794,
+            "p50Ms": 0.23739500000010594,
+            "p95Ms": 0.3999100000000908,
+            "p99Ms": 1.2126549999993586,
+            "maxMs": 1.2126549999993586,
+            "meanMs": 0.2739439777777382
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 0.49310499999955937,
+            "p50Ms": 0.742722999999387,
+            "p95Ms": 1.9810749999996915,
+            "p99Ms": 7.67388100000062,
+            "maxMs": 7.67388100000062,
+            "meanMs": 0.9829548166666275
+          }
+        },
+        "10000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 1.7827440000000934,
+            "p50Ms": 2.1647600000005696,
+            "p95Ms": 4.1859489999997095,
+            "p99Ms": 4.332465000000411,
+            "maxMs": 4.332465000000411,
+            "meanMs": 2.6680177222221877
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 1.7926419999994323,
+            "p50Ms": 2.089046000000053,
+            "p95Ms": 6.13353300000017,
+            "p99Ms": 7.879305999999815,
+            "maxMs": 7.879305999999815,
+            "meanMs": 2.820135066666666
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 2.093616000000111,
+            "p50Ms": 2.6338200000000143,
+            "p95Ms": 9.989802999999483,
+            "p99Ms": 28.254954999999427,
+            "maxMs": 28.254954999999427,
+            "meanMs": 4.249352049999925
+          }
+        },
+        "100000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 20.151859999999942,
+            "p50Ms": 22.43557200000032,
+            "p95Ms": 30.217235000000073,
+            "p99Ms": 35.739369000000806,
+            "maxMs": 35.739369000000806,
+            "meanMs": 23.63331534444459
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 19.868689000000813,
+            "p50Ms": 23.111751000000368,
+            "p95Ms": 37.72071599999981,
+            "p99Ms": 62.977999999999156,
+            "maxMs": 62.977999999999156,
+            "meanMs": 25.002887999999945
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 20.620249000001422,
+            "p50Ms": 22.989760999998907,
+            "p95Ms": 40.365836000000854,
+            "p99Ms": 63.706357000000935,
+            "maxMs": 63.706357000000935,
+            "meanMs": 25.766041266666676
+          }
+        }
+      },
+      "scaleErrors": {
+        "1000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        },
+        "10000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        },
+        "100000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        }
+      },
+      "concurrency": {
+        "1": {
+          "indexedRead": {
+            "execution": {
+              "n": 5,
+              "minMs": 0.10174000000188244,
+              "p50Ms": 0.14239699999961886,
+              "p95Ms": 0.36974299999928917,
+              "p99Ms": 0.36974299999928917,
+              "maxMs": 0.36974299999928917,
+              "meanMs": 0.17878519999940182
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 0.32428799999979674,
+              "p50Ms": 0.381215000001248,
+              "p95Ms": 3.315308000001096,
+              "p99Ms": 3.315308000001096,
+              "maxMs": 3.315308000001096,
+              "meanMs": 0.9834402000007685
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 5,
+              "minMs": 0.7917950000010023,
+              "p50Ms": 0.9578470000014931,
+              "p95Ms": 1.428578999999445,
+              "p99Ms": 1.428578999999445,
+              "maxMs": 1.428578999999445,
+              "meanMs": 1.0267638000004808
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 1.0720099999998638,
+              "p50Ms": 1.2843380000012985,
+              "p95Ms": 1.9360410000008414,
+              "p99Ms": 1.9360410000008414,
+              "maxMs": 1.9360410000008414,
+              "meanMs": 1.3787996000006388
+            }
+          }
+        },
+        "4": {
+          "indexedRead": {
+            "execution": {
+              "n": 20,
+              "minMs": 0.04512400000021444,
+              "p50Ms": 0.08055099999910453,
+              "p95Ms": 1.0827009999993606,
+              "p99Ms": 5.750252999998338,
+              "maxMs": 5.750252999998338,
+              "meanMs": 0.45655249999945224
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 1.0037830000001122,
+              "p50Ms": 1.2595220000002882,
+              "p95Ms": 16.485184000001027,
+              "p99Ms": 16.485184000001027,
+              "maxMs": 16.485184000001027,
+              "meanMs": 4.2499118000007
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 20,
+              "minMs": 0.351940000000468,
+              "p50Ms": 1.406076999999641,
+              "p95Ms": 3.818640999998024,
+              "p99Ms": 4.209272999996756,
+              "maxMs": 4.209272999996756,
+              "meanMs": 1.9568271999998614
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 4.284735000001092,
+              "p50Ms": 4.4075360000024375,
+              "p95Ms": 5.32307099999889,
+              "p99Ms": 5.32307099999889,
+              "maxMs": 5.32307099999889,
+              "meanMs": 4.564822200001072
+            }
+          }
+        },
+        "8": {
+          "indexedRead": {
+            "execution": {
+              "n": 40,
+              "minMs": 0.03783100000146078,
+              "p50Ms": 0.05231800000183284,
+              "p95Ms": 0.2909159999981057,
+              "p99Ms": 0.42618900000161375,
+              "maxMs": 0.42618900000161375,
+              "meanMs": 0.08736855000033757
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 1.2668650000014168,
+              "p50Ms": 1.4554189999980736,
+              "p95Ms": 8.986101999998937,
+              "p99Ms": 8.986101999998937,
+              "maxMs": 8.986101999998937,
+              "meanMs": 2.908335599998827
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 40,
+              "minMs": 0.3951809999998659,
+              "p50Ms": 2.6479049999979907,
+              "p95Ms": 9.946802999998908,
+              "p99Ms": 20.800125999998272,
+              "maxMs": 20.800125999998272,
+              "meanMs": 4.073381275000247
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 5.118107999998756,
+              "p50Ms": 10.895481999999902,
+              "p95Ms": 22.129479000002902,
+              "p99Ms": 22.129479000002902,
+              "maxMs": 22.129479000002902,
+              "meanMs": 13.81717900000076
+            }
+          }
+        }
+      },
+      "independent": {
+        "noop": {
+          "execution": {
+            "n": 10,
+            "minMs": 0.0031159999998635612,
+            "p50Ms": 0.003616999998484971,
+            "p95Ms": 0.00495000000228174,
+            "p99Ms": 0.00495000000228174,
+            "maxMs": 0.00495000000228174,
+            "meanMs": 0.003959499999473337
+          },
+          "controllerRoundTrip": null,
+          "runtimeReported": {
+            "n": 10,
+            "minMs": 0.012283000000024913,
+            "p50Ms": 0.014967999999498716,
+            "p95Ms": 0.027902000001631677,
+            "p99Ms": 0.027902000001631677,
+            "maxMs": 0.027902000001631677,
+            "meanMs": 0.015850800000407617
+          }
+        },
+        "select1": {
+          "execution": null,
+          "controllerRoundTrip": null,
+          "runtimeReported": null
+        },
+        "gardenRead": {
+          "execution": null,
+          "controllerRoundTrip": null,
+          "runtimeReported": null
+        }
+      },
+      "outbound": {
+        "https://telegram.org/js/telegram-web-app.js": {
+          "allAttempts": {
+            "n": 30,
+            "minMs": 22.290268999997352,
+            "p50Ms": 23.27848300000187,
+            "p95Ms": 36.47016200000144,
+            "p99Ms": 160.5207389999996,
+            "maxMs": 160.5207389999996,
+            "meanMs": 29.48531503333349
+          },
+          "successTiming": {
+            "n": 30,
+            "minMs": 22.290268999997352,
+            "p50Ms": 23.27848300000187,
+            "p95Ms": 36.47016200000144,
+            "p99Ms": 160.5207389999996,
+            "maxMs": 160.5207389999996,
+            "meanMs": 29.48531503333349
+          },
+          "failures": 0,
+          "successes": 30,
+          "responses": [
+            {
+              "status": 200,
+              "characters": 119731
+            },
+            {
+              "status": 200,
+              "characters": 119731
+            },
+            {
+              "status": 200,
+              "characters": 119731
+            }
+          ]
+        },
+        "https://app8881637352.tgcloud.ai/": {
+          "allAttempts": {
+            "n": 30,
+            "minMs": 15.045102999996743,
+            "p50Ms": 15.723313999998936,
+            "p95Ms": 18.38600900000165,
+            "p99Ms": 74.81500600000072,
+            "maxMs": 74.81500600000072,
+            "meanMs": 17.916696433333104
+          },
+          "successTiming": {
+            "n": 30,
+            "minMs": 15.045102999996743,
+            "p50Ms": 15.723313999998936,
+            "p95Ms": 18.38600900000165,
+            "p99Ms": 74.81500600000072,
+            "maxMs": 74.81500600000072,
+            "meanMs": 17.916696433333104
+          },
+          "failures": 0,
+          "successes": 30,
+          "responses": [
+            {
+              "status": 200,
+              "characters": 2477
+            },
+            {
+              "status": 200,
+              "characters": 2477
+            },
+            {
+              "status": 200,
+              "characters": 2477
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "node": "v22.23.3",
+        "sqlite": "3.51.3",
+        "vcpus": 1,
+        "memoryMiB": 1964,
+        "freeMiB": 1453,
+        "load": [
+          0.44,
+          0.16,
+          0.06
+        ],
+        "kernel": "5.15.0-198-generic",
+        "usage": {
+          "userCPUTime": 25872,
+          "systemCPUTime": 12939,
+          "maxRSS": 49384,
+          "sharedMemorySize": 0,
+          "unsharedDataSize": 0,
+          "unsharedStackSize": 0,
+          "minorPageFault": 3016,
+          "majorPageFault": 0,
+          "swappedOut": 0,
+          "fsRead": 0,
+          "fsWrite": 24,
+          "ipcSent": 0,
+          "ipcReceived": 0,
+          "signalsCount": 0,
+          "voluntaryContextSwitches": 22,
+          "involuntaryContextSwitches": 22
+        },
+        "runtimeReportedMs": 0.7511390000000091
+      },
+      "filesystem": {
+        "filesystems": [
+          {
+            "target": "/",
+            "source": "/dev/vda2",
+            "fstype": "ext4"
+          }
+        ]
+      },
+      "counter": {
+        "value": 65,
+        "runtimeReportedMs": 0.27070800000001327
+      },
+      "concurrencyScope": "SQLite worker threads, one independent connection per worker"
+    },
+    "telegram": {
+      "micro": {
+        "select1": {
+          "n": 150,
+          "minMs": 1,
+          "p50Ms": 2,
+          "p95Ms": 2,
+          "p99Ms": 2,
+          "maxMs": 3,
+          "meanMs": 1.6466666666666667
+        },
+        "indexedRead": {
+          "n": 150,
+          "minMs": 1,
+          "p50Ms": 2,
+          "p95Ms": 2,
+          "p99Ms": 2,
+          "maxMs": 2,
+          "meanMs": 1.6666666666666667
+        },
+        "increment": {
+          "n": 150,
+          "minMs": 12,
+          "p50Ms": 17,
+          "p95Ms": 21,
+          "p99Ms": 21,
+          "maxMs": 21,
+          "meanMs": 16.893333333333334
+        },
+        "write32Separate": {
+          "n": 30,
+          "minMs": 489,
+          "p50Ms": 533,
+          "p95Ms": 590,
+          "p99Ms": 600,
+          "maxMs": 600,
+          "meanMs": 536.3
+        },
+        "write32Batch": {
+          "n": 30,
+          "minMs": 13,
+          "p50Ms": 16,
+          "p95Ms": 21,
+          "p99Ms": 21,
+          "maxMs": 21,
+          "meanMs": 16.6
+        }
+      },
+      "pure": {
+        "cpu": {
+          "batchRuntime": {
+            "n": 30,
+            "minMs": 39.153337478638,
+            "p50Ms": 41.225910186768004,
+            "p95Ms": 41.847467422484996,
+            "p99Ms": 42.010545730591,
+            "maxMs": 42.010545730591,
+            "meanMs": 41.03212356567396
+          },
+          "normalizedPerIteration": {
+            "n": 30,
+            "minMs": 1.9576668739319,
+            "p50Ms": 2.0612955093384002,
+            "p95Ms": 2.09237337112425,
+            "p99Ms": 2.10052728652955,
+            "maxMs": 2.10052728652955,
+            "meanMs": 2.051606178283698
+          },
+          "blocks": 30,
+          "iterations": 600,
+          "iterationsPerBlock": 20,
+          "checksums": [
+            2225220677
+          ]
+        },
+        "json": {
+          "batchRuntime": {
+            "n": 30,
+            "minMs": 48.120498657227,
+            "p50Ms": 55.394649505615,
+            "p95Ms": 64.339160919189,
+            "p99Ms": 67.282438278198,
+            "maxMs": 67.282438278198,
+            "meanMs": 56.40030701955163
+          },
+          "normalizedPerIteration": {
+            "n": 30,
+            "minMs": 9.624099731445401,
+            "p50Ms": 11.078929901123,
+            "p95Ms": 12.8678321838378,
+            "p99Ms": 13.4564876556396,
+            "maxMs": 13.4564876556396,
+            "meanMs": 11.280061403910329
+          },
+          "blocks": 30,
+          "iterations": 150,
+          "iterationsPerBlock": 5,
+          "jsonBytes": 530047,
+          "checksums": [
+            40950
+          ]
+        }
+      },
+      "scale": {
+        "1000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 6,
+            "p50Ms": 7,
+            "p95Ms": 8,
+            "p99Ms": 9,
+            "maxMs": 9,
+            "meanMs": 7.277777777777778
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 4,
+            "p50Ms": 5,
+            "p95Ms": 6,
+            "p99Ms": 6,
+            "maxMs": 6,
+            "meanMs": 5.022222222222222
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 21,
+            "p50Ms": 22,
+            "p95Ms": 24,
+            "p99Ms": 24,
+            "maxMs": 24,
+            "meanMs": 22.45
+          }
+        },
+        "10000": {
+          "gardenRead": {
+            "n": 90,
+            "minMs": 34,
+            "p50Ms": 36,
+            "p95Ms": 37,
+            "p99Ms": 48,
+            "maxMs": 48,
+            "meanMs": 36.21111111111111
+          },
+          "gardenReadNoEnsure": {
+            "n": 90,
+            "minMs": 33,
+            "p50Ms": 34,
+            "p95Ms": 35,
+            "p99Ms": 36,
+            "maxMs": 36,
+            "meanMs": 33.888888888888886
+          },
+          "gardenWater": {
+            "n": 60,
+            "minMs": 50,
+            "p50Ms": 51,
+            "p95Ms": 54,
+            "p99Ms": 62,
+            "maxMs": 62,
+            "meanMs": 51.68333333333333
+          }
+        },
+        "100000": {
+          "gardenRead": null,
+          "gardenReadNoEnsure": null,
+          "gardenWater": null
+        }
+      },
+      "scaleErrors": {
+        "1000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        },
+        "10000": {
+          "gardenRead": [],
+          "gardenReadNoEnsure": [],
+          "gardenWater": []
+        },
+        "100000": {
+          "gardenRead": [
+            {
+              "round": 0,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            },
+            {
+              "round": 1,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            },
+            {
+              "round": 2,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            }
+          ],
+          "gardenReadNoEnsure": [
+            {
+              "round": 0,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            },
+            {
+              "round": 1,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            },
+            {
+              "round": 2,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            }
+          ],
+          "gardenWater": [
+            {
+              "round": 0,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            },
+            {
+              "round": 1,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            },
+            {
+              "round": 2,
+              "error": "Uncaught exception: Error: Sqlite query rows_read limit exceeded"
+            }
+          ]
+        }
+      },
+      "concurrency": {
+        "1": {
+          "indexedRead": {
+            "execution": {
+              "n": 5,
+              "minMs": 1,
+              "p50Ms": 2,
+              "p95Ms": 3,
+              "p99Ms": 3,
+              "maxMs": 3,
+              "meanMs": 2
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 1,
+              "p50Ms": 2,
+              "p95Ms": 3,
+              "p99Ms": 3,
+              "maxMs": 3,
+              "meanMs": 2
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 5,
+              "minMs": 13,
+              "p50Ms": 13,
+              "p95Ms": 14,
+              "p99Ms": 14,
+              "maxMs": 14,
+              "meanMs": 13.2
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 13,
+              "p50Ms": 13,
+              "p95Ms": 14,
+              "p99Ms": 14,
+              "maxMs": 14,
+              "meanMs": 13.2
+            }
+          }
+        },
+        "4": {
+          "indexedRead": {
+            "execution": {
+              "n": 20,
+              "minMs": 2,
+              "p50Ms": 2,
+              "p95Ms": 2,
+              "p99Ms": 2,
+              "maxMs": 2,
+              "meanMs": 2
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 2,
+              "p50Ms": 2,
+              "p95Ms": 2,
+              "p99Ms": 2,
+              "maxMs": 2,
+              "meanMs": 2
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 20,
+              "minMs": 13,
+              "p50Ms": 14,
+              "p95Ms": 20,
+              "p99Ms": 20,
+              "maxMs": 20,
+              "meanMs": 16
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 13,
+              "p50Ms": 14,
+              "p95Ms": 20,
+              "p99Ms": 20,
+              "maxMs": 20,
+              "meanMs": 16
+            }
+          }
+        },
+        "8": {
+          "indexedRead": {
+            "execution": {
+              "n": 40,
+              "minMs": 1,
+              "p50Ms": 2,
+              "p95Ms": 4,
+              "p99Ms": 4,
+              "maxMs": 4,
+              "meanMs": 2.5
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 3,
+              "p50Ms": 4,
+              "p95Ms": 4,
+              "p99Ms": 4,
+              "maxMs": 4,
+              "meanMs": 3.8
+            }
+          },
+          "increment": {
+            "execution": {
+              "n": 40,
+              "minMs": 14,
+              "p50Ms": 19,
+              "p95Ms": 40,
+              "p99Ms": 40,
+              "maxMs": 40,
+              "meanMs": 22.725
+            },
+            "controllerBatch": {
+              "n": 5,
+              "minMs": 27,
+              "p50Ms": 31,
+              "p95Ms": 40,
+              "p99Ms": 40,
+              "maxMs": 40,
+              "meanMs": 33.6
+            }
+          }
+        }
+      },
+      "independent": {
+        "noop": {
+          "execution": {
+            "n": 10,
+            "minMs": 0,
+            "p50Ms": 0,
+            "p95Ms": 0,
+            "p99Ms": 0,
+            "maxMs": 0,
+            "meanMs": 0
+          },
+          "controllerRoundTrip": {
+            "n": 10,
+            "minMs": 108.92960000000312,
+            "p50Ms": 110.21719999998459,
+            "p95Ms": 131.7992999999842,
+            "p99Ms": 131.7992999999842,
+            "maxMs": 131.7992999999842,
+            "meanMs": 112.46441999999516
+          },
+          "runtimeReported": {
+            "n": 10,
+            "minMs": 3.7927627563477,
+            "p50Ms": 4.1882991790771,
+            "p95Ms": 5.014181137085,
+            "p99Ms": 5.014181137085,
+            "maxMs": 5.014181137085,
+            "meanMs": 4.25069332122803
+          }
+        },
+        "select1": {
+          "execution": null,
+          "controllerRoundTrip": null,
+          "runtimeReported": null
+        },
+        "gardenRead": {
+          "execution": null,
+          "controllerRoundTrip": null,
+          "runtimeReported": null
+        }
+      },
+      "outbound": {
+        "https://telegram.org/js/telegram-web-app.js": {
+          "allAttempts": {
+            "n": 30,
+            "minMs": 11,
+            "p50Ms": 16,
+            "p95Ms": 67,
+            "p99Ms": 68,
+            "maxMs": 68,
+            "meanMs": 19.6
+          },
+          "successTiming": {
+            "n": 30,
+            "minMs": 11,
+            "p50Ms": 16,
+            "p95Ms": 67,
+            "p99Ms": 68,
+            "maxMs": 68,
+            "meanMs": 19.6
+          },
+          "failures": 0,
+          "successes": 30,
+          "responses": [
+            {
+              "status": 200,
+              "characters": 119731
+            },
+            {
+              "status": 200,
+              "characters": 119731
+            },
+            {
+              "status": 200,
+              "characters": 119731
+            }
+          ]
+        },
+        "https://app8881637352.tgcloud.ai/": {
+          "allAttempts": {
+            "n": 9,
+            "minMs": 4,
+            "p50Ms": 8,
+            "p95Ms": 45,
+            "p99Ms": 45,
+            "maxMs": 45,
+            "meanMs": 16
+          },
+          "successTiming": null,
+          "failures": 9,
+          "successes": 0,
+          "responses": [
+            {
+              "status": null,
+              "characters": 0,
+              "error": "fetch: request failed"
+            },
+            {
+              "status": null,
+              "characters": 0,
+              "error": "fetch: request failed"
+            },
+            {
+              "status": null,
+              "characters": 0,
+              "error": "fetch: request failed"
+            }
+          ]
+        }
+      },
+      "counter": {
+        "value": 65
+      },
+      "concurrencyScope": "Concurrent SDK SQL calls inside one invocation"
+    }
+  },
+  "correctness": {
+    "cpuChecksumsMatch": true,
+    "jsonChecksumsMatch": true,
+    "originalGardenPreserved": true,
+    "fixtureCleanupConfirmed": true,
+    "countersMatch": true,
+    "deployedRevisionUnchanged": true,
+    "deployedSourcesUnchanged": true,
+    "expectedSampleCountsMatch": true
+  }
+}

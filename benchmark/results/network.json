@@ -1,0 +1,379 @@
+{
+  "startedAt": "2026-10-10T15:03:13.794Z",
+  "networkContext": "Windows Wi-Fi; active Xray Wintun tunnel; no tunnel settings changed.",
+  "note": "Fresh TCP+TLS connections from the same Windows PC through its existing tunnel. Includes neither an HTTP request nor any database operation. TCP connect may be acknowledged by the local tunnel and is not remote RTT.",
+  "hosts": {
+    "telegram": {
+      "samples": [
+        {
+          "tcpMs": 15.002300000000002,
+          "tlsMs": 118.107,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.5208000000000084,
+          "tlsMs": 100.94179999999994,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.1521999999999935,
+          "tlsMs": 99.98109999999997,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.2884000000000242,
+          "tlsMs": 113.20270000000005,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.3050000000000637,
+          "tlsMs": 102.06560000000013,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.0945999999999003,
+          "tlsMs": 113.36069999999995,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.0669000000000324,
+          "tlsMs": 195.06780000000026,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.0815999999999804,
+          "tlsMs": 96.08719999999994,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.020799999999781,
+          "tlsMs": 100.01960000000008,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.2550000000001091,
+          "tlsMs": 104.73010000000022,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.0658000000003085,
+          "tlsMs": 100.87249999999995,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.119499999999789,
+          "tlsMs": 120.08609999999999,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.0908999999996922,
+          "tlsMs": 102.04419999999982,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.2274999999999636,
+          "tlsMs": 110.29050000000007,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.31670000000031,
+          "tlsMs": 135.36110000000008,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.443699999999808,
+          "tlsMs": 181.38560000000052,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.1525000000001455,
+          "tlsMs": 103.34760000000006,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.076100000000224,
+          "tlsMs": 113.40549999999985,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.1143000000001848,
+          "tlsMs": 105.41900000000078,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.291400000000067,
+          "tlsMs": 114.61030000000028,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        }
+      ]
+    },
+    "fi": {
+      "samples": [
+        {
+          "tcpMs": 0.785899999999998,
+          "tlsMs": 68.41039999999998,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7942000000000462,
+          "tlsMs": 87.21100000000001,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.9338999999999942,
+          "tlsMs": 78.5258,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.9522999999999229,
+          "tlsMs": 69.98700000000008,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7472000000000207,
+          "tlsMs": 69.95939999999996,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.6995999999999185,
+          "tlsMs": 95.93859999999995,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.6889000000001033,
+          "tlsMs": 75.29460000000017,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7247999999999593,
+          "tlsMs": 76.16640000000007,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7487999999998465,
+          "tlsMs": 68.7518,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.8697999999999411,
+          "tlsMs": 71.06989999999996,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7324000000003252,
+          "tlsMs": 70.71370000000024,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.6693999999997686,
+          "tlsMs": 86.13760000000002,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7161000000000968,
+          "tlsMs": 75.68910000000005,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7407000000002881,
+          "tlsMs": 76.76119999999992,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.863800000000083,
+          "tlsMs": 85.28629999999976,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7761000000000422,
+          "tlsMs": 75.72910000000047,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.8559999999997672,
+          "tlsMs": 173.07150000000001,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.9218000000000757,
+          "tlsMs": 68.22549999999956,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.8478000000004613,
+          "tlsMs": 72.56869999999981,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7327999999997701,
+          "tlsMs": 1127.8246,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        }
+      ]
+    },
+    "de": {
+      "samples": [
+        {
+          "tcpMs": 0.8538999999999817,
+          "tlsMs": 123.35699999999997,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7778999999999883,
+          "tlsMs": 122.7844,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.808400000000006,
+          "tlsMs": 131.0575,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7129999999999654,
+          "tlsMs": 125.5272,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.8509000000001379,
+          "tlsMs": 128.91650000000004,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7491999999999734,
+          "tlsMs": 129.22800000000007,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.8249999999998181,
+          "tlsMs": 122.42650000000003,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.8787999999999556,
+          "tlsMs": 124.13590000000022,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7548000000001593,
+          "tlsMs": 127.46040000000039,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.8364999999998872,
+          "tlsMs": 127.89710000000014,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7406999999998334,
+          "tlsMs": 125.61519999999973,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7186999999998989,
+          "tlsMs": 125.20879999999988,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7122999999996864,
+          "tlsMs": 127.98090000000002,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.0728999999992084,
+          "tlsMs": 147.0066999999999,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.7529000000004089,
+          "tlsMs": 132.64460000000054,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.9040000000004511,
+          "tlsMs": 132.90110000000004,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.149600000000646,
+          "tlsMs": 131.42630000000008,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.6873999999997977,
+          "tlsMs": 124.26569999999992,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 1.1301000000003114,
+          "tlsMs": 129.65380000000005,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        },
+        {
+          "tcpMs": 0.976900000000569,
+          "tlsMs": 133.35410000000047,
+          "protocol": "TLSv1.3",
+          "sessionReused": false
+        }
+      ]
+    }
+  }
+}

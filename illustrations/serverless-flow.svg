@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650">
+<defs><marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11" fill="none" stroke="#2682bb" stroke-width="2"/></marker></defs>
+<rect width="1600" height="650" rx="28" fill="#faf8f2"/>
+<g font-family="Segoe UI, Arial, sans-serif" fill="#15253d">
+<text x="72" y="80" font-size="40" font-weight="700">Что происходит после нажатия «Полить»</text>
+<text x="72" y="125" font-size="24" fill="#637083">Событие вызывает функцию. Результат полива сохраняется в базе.</text>
+<rect x="350" y="190" width="1180" height="340" rx="25" fill="#edf5fa" stroke="#b7cddd" stroke-width="2"/>
+<text x="385" y="235" font-size="25" font-weight="600">Инфраструктура Telegram</text>
+<rect x="60" y="290" width="220" height="135" rx="20" fill="white" stroke="#8aa4b5" stroke-width="2"/>
+<text x="170" y="337" font-size="26" text-anchor="middle" font-weight="600">Пользователь</text>
+<text x="170" y="380" font-size="26" text-anchor="middle" fill="#2682bb">/water</text>
+<rect x="610" y="290" width="375" height="135" rx="20" fill="white" stroke="#2682bb" stroke-width="2"/>
+<text x="797" y="335" font-size="26" text-anchor="middle" font-weight="600">JavaScript-обработчик</text>
+<text x="797" y="379" font-size="23" text-anchor="middle" fill="#637083">проверяет и записывает полив</text>
+<rect x="1170" y="290" width="290" height="135" rx="20" fill="white" stroke="#48966c" stroke-width="2"/>
+<text x="1315" y="338" font-size="30" text-anchor="middle" font-weight="700" fill="#377953">SQLite</text>
+<text x="1315" y="379" font-size="23" text-anchor="middle" fill="#637083">журнал поливов</text>
+<path d="M280 345 H595" stroke="#2682bb" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<text x="443" y="320" font-size="23" text-anchor="middle">сообщение</text>
+<path d="M1000 345 H1154" stroke="#2682bb" stroke-width="4" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="1075" y="320" font-size="23" text-anchor="middle">данные</text>
+<path d="M797 430 V483 H170 V441" stroke="#2682bb" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<text x="475" y="471" font-size="23" text-anchor="middle" fill="#2682bb">ответ бота</text>
+<text x="72" y="592" font-size="24" fill="#637083">Вызов заканчивается, записи остаются. Следующий вызов прочитает их из SQLite.</text>
+</g></svg>

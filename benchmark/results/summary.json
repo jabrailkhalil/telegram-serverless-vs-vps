@@ -1,0 +1,479 @@
+{
+  "date": "2026-10-10",
+  "quantiles": "nearest rank",
+  "environments": {
+    "telegram": {
+      "modes": {
+        "read": {
+          "n": 50,
+          "minMs": 7,
+          "p50Ms": 7,
+          "p95Ms": 8,
+          "maxMs": 9,
+          "meanMs": 7.32
+        },
+        "water": {
+          "n": 50,
+          "minMs": 22,
+          "p50Ms": 24,
+          "p95Ms": 25,
+          "maxMs": 26,
+          "meanMs": 23.92
+        },
+        "replay": {
+          "n": 50,
+          "minMs": 13,
+          "p50Ms": 14,
+          "p95Ms": 16,
+          "maxMs": 18,
+          "meanMs": 14.22
+        }
+      },
+      "concurrent": {
+        "same": [
+          {
+            "round": 0,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 18,
+              "p50Ms": 18,
+              "p95Ms": 29,
+              "maxMs": 29,
+              "meanMs": 21
+            }
+          },
+          {
+            "round": 1,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 30,
+              "p50Ms": 30,
+              "p95Ms": 34,
+              "maxMs": 34,
+              "meanMs": 31
+            }
+          },
+          {
+            "round": 2,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 26,
+              "p50Ms": 28,
+              "p95Ms": 33,
+              "maxMs": 33,
+              "meanMs": 29.5
+            }
+          }
+        ],
+        "different": [
+          {
+            "round": 0,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 27,
+              "p50Ms": 28,
+              "p95Ms": 30,
+              "maxMs": 30,
+              "meanMs": 28.5
+            }
+          },
+          {
+            "round": 1,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 27,
+              "p50Ms": 27,
+              "p95Ms": 28,
+              "maxMs": 28,
+              "meanMs": 27.5
+            }
+          },
+          {
+            "round": 2,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 25,
+              "p50Ms": 38,
+              "p95Ms": 43,
+              "maxMs": 43,
+              "meanMs": 37
+            }
+          }
+        ]
+      },
+      "metadata": null,
+      "maxRssMiB": null,
+      "cpuTimeMs": null,
+      "sqlite": {
+        "unavailable": true,
+        "reason": "Failed to prepare query [1] not authorized to use function: sqlite_version"
+      },
+      "journalMode": {
+        "unavailable": true,
+        "reason": "Failed to prepare query [23] not authorized"
+      },
+      "synchronous": {
+        "unavailable": true,
+        "reason": "Failed to prepare query [23] not authorized"
+      }
+    },
+    "fi": {
+      "modes": {
+        "read": {
+          "n": 50,
+          "minMs": 0.22000500000000045,
+          "p50Ms": 0.424720999999991,
+          "p95Ms": 1.6797090000000026,
+          "maxMs": 1.876722000000001,
+          "meanMs": 0.7721774599999983
+        },
+        "water": {
+          "n": 50,
+          "minMs": 0.2976419999999962,
+          "p50Ms": 0.6864850000000047,
+          "p95Ms": 2.008107999999993,
+          "maxMs": 2.499015000000014,
+          "meanMs": 1.0274363000000009
+        },
+        "replay": {
+          "n": 50,
+          "minMs": 0.28980699999999615,
+          "p50Ms": 0.3824209999999937,
+          "p95Ms": 1.4674490000000162,
+          "maxMs": 4.21425099999999,
+          "meanMs": 0.7914955399999997
+        }
+      },
+      "concurrent": {
+        "same": [
+          {
+            "round": 0,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 8.677110999999968,
+              "p50Ms": 8.715964999999983,
+              "p95Ms": 21.849784999999997,
+              "maxMs": 21.849784999999997,
+              "meanMs": 12.179617250000007
+            }
+          },
+          {
+            "round": 1,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 0.4262350000000197,
+              "p50Ms": 0.43129399999997986,
+              "p95Ms": 0.8122320000001082,
+              "maxMs": 0.8122320000001082,
+              "meanMs": 0.5355655000000183
+            }
+          },
+          {
+            "round": 2,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 0.5607080000000906,
+              "p50Ms": 1.2959149999999227,
+              "p95Ms": 6.277493999999933,
+              "maxMs": 6.277493999999933,
+              "meanMs": 2.7736607499999764
+            }
+          }
+        ],
+        "different": [
+          {
+            "round": 0,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 0.6367220000000771,
+              "p50Ms": 0.7537929999999733,
+              "p95Ms": 6.452485000000024,
+              "maxMs": 6.452485000000024,
+              "meanMs": 2.2170182500000237
+            }
+          },
+          {
+            "round": 1,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 0.6086589999999887,
+              "p50Ms": 3.6035300000000916,
+              "p95Ms": 5.416940000000068,
+              "maxMs": 5.416940000000068,
+              "meanMs": 3.436354000000051
+            }
+          },
+          {
+            "round": 2,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 0.449647999999911,
+              "p50Ms": 0.45319500000005064,
+              "p95Ms": 1.5025849999999537,
+              "maxMs": 1.5025849999999537,
+              "meanMs": 0.7198482499999557
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "node": "v22.23.3",
+        "cpus": 1,
+        "cpuModel": "AMD Ryzen 9 5950X 16-Core Processor",
+        "totalMemoryMiB": 1963,
+        "freeMemoryMiB": 1142,
+        "load": [
+          1.83,
+          1.45,
+          1.35
+        ],
+        "kernel": "7.0.0-22-generic"
+      },
+      "maxRssMiB": 98.15625,
+      "cpuTimeMs": 347.495,
+      "sqlite": "3.51.3",
+      "journalMode": {
+        "journal_mode": "wal"
+      },
+      "synchronous": {
+        "synchronous": 2
+      }
+    },
+    "de": {
+      "modes": {
+        "read": {
+          "n": 50,
+          "minMs": 0.26344499999999016,
+          "p50Ms": 0.4827060000000074,
+          "p95Ms": 1.3708509999999592,
+          "maxMs": 1.6804730000000063,
+          "meanMs": 0.6227501999999958
+        },
+        "water": {
+          "n": 50,
+          "minMs": 1.0421549999999797,
+          "p50Ms": 1.7588790000000358,
+          "p95Ms": 2.619324000000006,
+          "maxMs": 2.9951389999999947,
+          "meanMs": 1.8208906999999965
+        },
+        "replay": {
+          "n": 50,
+          "minMs": 0.26986599999997907,
+          "p50Ms": 0.32537999999999556,
+          "p95Ms": 1.0253740000000562,
+          "maxMs": 7.045989999999961,
+          "meanMs": 0.5779063800000108
+        }
+      },
+      "concurrent": {
+        "same": [
+          {
+            "round": 0,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 2.6085229999998774,
+              "p50Ms": 9.562440000000151,
+              "p95Ms": 10.083077000000003,
+              "maxMs": 10.083077000000003,
+              "meanMs": 8.038730999999984
+            }
+          },
+          {
+            "round": 1,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 2.6409949999999753,
+              "p50Ms": 3.794398000000001,
+              "p95Ms": 4.301279000000022,
+              "maxMs": 4.301279000000022,
+              "meanMs": 3.7346410000000105
+            }
+          },
+          {
+            "round": 2,
+            "accepted": 1,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 2.9051200000001245,
+              "p50Ms": 4.081436000000167,
+              "p95Ms": 5.5971700000000055,
+              "maxMs": 5.5971700000000055,
+              "meanMs": 4.351342750000072
+            }
+          }
+        ],
+        "different": [
+          {
+            "round": 0,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 2.418296000000055,
+              "p50Ms": 5.41335499999991,
+              "p95Ms": 21.669282000000067,
+              "maxMs": 21.669282000000067,
+              "meanMs": 10.136921749999999
+            }
+          },
+          {
+            "round": 1,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 2.0837679999999636,
+              "p50Ms": 3.401491999999962,
+              "p95Ms": 11.554415999999947,
+              "maxMs": 11.554415999999947,
+              "meanMs": 5.698129499999936
+            }
+          },
+          {
+            "round": 2,
+            "accepted": 4,
+            "requests": 4,
+            "timing": {
+              "n": 4,
+              "minMs": 2.454674999999952,
+              "p50Ms": 3.3393650000000434,
+              "p95Ms": 10.802196000000095,
+              "maxMs": 10.802196000000095,
+              "meanMs": 5.606014750000043
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "node": "v22.23.3",
+        "cpus": 1,
+        "cpuModel": "AMD Ryzen 9 5950X 16-Core Processor",
+        "totalMemoryMiB": 1964,
+        "freeMemoryMiB": 1324,
+        "load": [
+          0.11,
+          0.06,
+          0.01
+        ],
+        "kernel": "5.15.0-191-generic"
+      },
+      "maxRssMiB": 96.45703125,
+      "cpuTimeMs": 886.5,
+      "sqlite": "3.51.3",
+      "journalMode": {
+        "journal_mode": "wal"
+      },
+      "synchronous": {
+        "synchronous": 2
+      }
+    }
+  },
+  "network": {
+    "telegram": {
+      "attempts": 20,
+      "errors": 0,
+      "tls": {
+        "n": 20,
+        "minMs": 96.08719999999994,
+        "p50Ms": 105.41900000000078,
+        "p95Ms": 181.38560000000052,
+        "maxMs": 195.06780000000026,
+        "meanMs": 116.51930000000009
+      },
+      "tcpLocalTunnel": {
+        "n": 20,
+        "minMs": 1.020799999999781,
+        "p50Ms": 1.1521999999999935,
+        "p95Ms": 1.5208000000000084,
+        "maxMs": 15.002300000000002,
+        "meanMs": 1.8843000000000196
+      },
+      "protocols": [
+        "TLSv1.3"
+      ],
+      "sessionsReused": 0
+    },
+    "fi": {
+      "attempts": 20,
+      "errors": 0,
+      "tls": {
+        "n": 20,
+        "minMs": 68.22549999999956,
+        "p50Ms": 75.68910000000005,
+        "p95Ms": 173.07150000000001,
+        "maxMs": 1127.8246,
+        "meanMs": 133.66610999999997
+      },
+      "tcpLocalTunnel": {
+        "n": 20,
+        "minMs": 0.6693999999997686,
+        "p50Ms": 0.7487999999998465,
+        "p95Ms": 0.9338999999999942,
+        "maxMs": 0.9522999999999229,
+        "meanMs": 0.7901150000000214
+      },
+      "protocols": [
+        "TLSv1.3"
+      ],
+      "sessionsReused": 0
+    },
+    "de": {
+      "attempts": 20,
+      "errors": 0,
+      "tls": {
+        "n": 20,
+        "minMs": 122.42650000000003,
+        "p50Ms": 127.89710000000014,
+        "p95Ms": 133.35410000000047,
+        "maxMs": 147.0066999999999,
+        "meanMs": 128.64238500000008
+      },
+      "tcpLocalTunnel": {
+        "n": 20,
+        "minMs": 0.6873999999997977,
+        "p50Ms": 0.808400000000006,
+        "p95Ms": 1.1301000000003114,
+        "maxMs": 1.149600000000646,
+        "meanMs": 0.8446950000000342
+      },
+      "protocols": [
+        "TLSv1.3"
+      ],
+      "sessionsReused": 0
+    }
+  },
+  "cleanup": {
+    "temporaryCloudTablesRemaining": 0,
+    "liveGardenWaterCountPreserved": 18
+  }
+}

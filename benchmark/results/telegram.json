@@ -1,0 +1,669 @@
+{
+  "environment": "Telegram Serverless",
+  "timer": "Date.now (1 ms quantization)",
+  "note": "Authenticated developer run API. Measured operations reuse an invocation after five warmups. Not a Mini App latency measurement.",
+  "startedAt": "2026-10-10T15:00:18.763Z",
+  "fixture": {
+    "gardens": "lab_bench_gardens_mv2itt57",
+    "events": "lab_bench_events_mv2itt57",
+    "index": "lab_bench_actor_mv2itt57"
+  },
+  "modes": {
+    "read": {
+      "mode": "read",
+      "samplesMs": [
+        7,
+        7,
+        8,
+        7,
+        8,
+        7,
+        8,
+        7,
+        7,
+        7,
+        8,
+        7,
+        7,
+        7,
+        7,
+        8,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        7,
+        7,
+        7,
+        7,
+        8,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        7,
+        8,
+        9,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8
+      ],
+      "warmupSamplesMs": [
+        23,
+        8,
+        7,
+        7,
+        8
+      ],
+      "accepted": 0,
+      "final": {
+        "plantedAt": 1791644418471,
+        "serverNow": 1791644418890,
+        "waters": 1000,
+        "contributors": 1000,
+        "maturedUnits": 120000,
+        "activeTimes": [],
+        "nextWaterAt": 1791644418890,
+        "growthUnits": 120000
+      }
+    },
+    "water": {
+      "mode": "water",
+      "samplesMs": [
+        23,
+        25,
+        24,
+        24,
+        24,
+        23,
+        25,
+        23,
+        23,
+        23,
+        22,
+        24,
+        24,
+        23,
+        25,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        23,
+        25,
+        23,
+        24,
+        25,
+        23,
+        24,
+        24,
+        25,
+        23,
+        25,
+        24,
+        23,
+        25,
+        24,
+        25,
+        24,
+        24,
+        25,
+        23,
+        24,
+        26,
+        26,
+        24,
+        24,
+        24,
+        25,
+        24,
+        24
+      ],
+      "warmupSamplesMs": [
+        27,
+        23,
+        24,
+        25,
+        23
+      ],
+      "accepted": 50,
+      "final": {
+        "plantedAt": 1791644418471,
+        "serverNow": 1791644420302,
+        "waters": 1055,
+        "contributors": 1005,
+        "maturedUnits": 120000,
+        "activeTimes": [
+          1791644418984,
+          1791644419011,
+          1791644419034,
+          1791644419058,
+          1791644419083,
+          1791644419106,
+          1791644419129,
+          1791644419154,
+          1791644419178,
+          1791644419202,
+          1791644419226,
+          1791644419249,
+          1791644419274,
+          1791644419297,
+          1791644419320,
+          1791644419343,
+          1791644419365,
+          1791644419389,
+          1791644419413,
+          1791644419436,
+          1791644419461,
+          1791644419484,
+          1791644419507,
+          1791644419530,
+          1791644419553,
+          1791644419576,
+          1791644419600,
+          1791644419623,
+          1791644419648,
+          1791644419671,
+          1791644419695,
+          1791644419720,
+          1791644419743,
+          1791644419767,
+          1791644419791,
+          1791644419816,
+          1791644419839,
+          1791644419864,
+          1791644419888,
+          1791644419911,
+          1791644419936,
+          1791644419960,
+          1791644419985,
+          1791644420009,
+          1791644420033,
+          1791644420058,
+          1791644420081,
+          1791644420105,
+          1791644420131,
+          1791644420157,
+          1791644420181,
+          1791644420205,
+          1791644420229,
+          1791644420254,
+          1791644420278
+        ],
+        "nextWaterAt": 1791644460000,
+        "growthUnits": 120037.07
+      }
+    },
+    "replay": {
+      "mode": "replay",
+      "samplesMs": [
+        16,
+        14,
+        13,
+        14,
+        15,
+        14,
+        14,
+        14,
+        13,
+        14,
+        14,
+        14,
+        14,
+        15,
+        13,
+        15,
+        18,
+        17,
+        14,
+        14,
+        14,
+        15,
+        14,
+        14,
+        16,
+        15,
+        14,
+        14,
+        15,
+        13,
+        13,
+        15,
+        14,
+        14,
+        14,
+        15,
+        13,
+        14,
+        13,
+        15,
+        14,
+        14,
+        14,
+        14,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14
+      ],
+      "warmupSamplesMs": [
+        20,
+        14,
+        15,
+        15,
+        14
+      ],
+      "accepted": 0,
+      "final": {
+        "plantedAt": 1791644418471,
+        "serverNow": 1791644421414,
+        "waters": 1055,
+        "contributors": 1005,
+        "maturedUnits": 120000,
+        "activeTimes": [
+          1791644418984,
+          1791644419011,
+          1791644419034,
+          1791644419058,
+          1791644419083,
+          1791644419106,
+          1791644419129,
+          1791644419154,
+          1791644419178,
+          1791644419202,
+          1791644419226,
+          1791644419249,
+          1791644419274,
+          1791644419297,
+          1791644419320,
+          1791644419343,
+          1791644419365,
+          1791644419389,
+          1791644419413,
+          1791644419436,
+          1791644419461,
+          1791644419484,
+          1791644419507,
+          1791644419530,
+          1791644419553,
+          1791644419576,
+          1791644419600,
+          1791644419623,
+          1791644419648,
+          1791644419671,
+          1791644419695,
+          1791644419720,
+          1791644419743,
+          1791644419767,
+          1791644419791,
+          1791644419816,
+          1791644419839,
+          1791644419864,
+          1791644419888,
+          1791644419911,
+          1791644419936,
+          1791644419960,
+          1791644419985,
+          1791644420009,
+          1791644420033,
+          1791644420058,
+          1791644420081,
+          1791644420105,
+          1791644420131,
+          1791644420157,
+          1791644420181,
+          1791644420205,
+          1791644420229,
+          1791644420254,
+          1791644420278
+        ],
+        "nextWaterAt": 1791644460000,
+        "growthUnits": 120098.23
+      }
+    }
+  },
+  "concurrent": [
+    {
+      "mode": "same",
+      "round": 0,
+      "results": [
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 29
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 18
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 18
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 19
+        }
+      ]
+    },
+    {
+      "mode": "same",
+      "round": 1,
+      "results": [
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 30
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 30
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 30
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 34
+        }
+      ]
+    },
+    {
+      "mode": "same",
+      "round": 2,
+      "results": [
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 26
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 33
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 28
+        },
+        {
+          "accepted": false,
+          "reason": "cooldown",
+          "executionMs": 31
+        }
+      ]
+    },
+    {
+      "mode": "different",
+      "round": 0,
+      "results": [
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 30
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 29
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 27
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 28
+        }
+      ]
+    },
+    {
+      "mode": "different",
+      "round": 1,
+      "results": [
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 28
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 28
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 27
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 27
+        }
+      ]
+    },
+    {
+      "mode": "different",
+      "round": 2,
+      "results": [
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 38
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 42
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 25
+        },
+        {
+          "accepted": true,
+          "reason": "watered",
+          "executionMs": 43
+        }
+      ]
+    }
+  ],
+  "managementCalls": [
+    {
+      "action": "setup",
+      "roundTripMs": 280.1699,
+      "runtimeReportedMs": 72.252511978149
+    },
+    {
+      "action": "read",
+      "roundTripMs": 504.04530000000005,
+      "runtimeReportedMs": 426.34654045105003
+    },
+    {
+      "action": "water",
+      "roundTripMs": 1662.3954999999999,
+      "runtimeReportedMs": 1326.1761665344002
+    },
+    {
+      "action": "replay",
+      "roundTripMs": 878.3890999999999,
+      "runtimeReportedMs": 798.18677902222
+    },
+    {
+      "action": "single",
+      "roundTripMs": 118.00959999999986,
+      "runtimeReportedMs": 29.845476150513
+    },
+    {
+      "action": "single",
+      "roundTripMs": 248.0246000000002,
+      "runtimeReportedMs": 19.639730453490998
+    },
+    {
+      "action": "single",
+      "roundTripMs": 258.5467999999996,
+      "runtimeReportedMs": 19.085884094238
+    },
+    {
+      "action": "single",
+      "roundTripMs": 279.355,
+      "runtimeReportedMs": 18.652677536010998
+    },
+    {
+      "action": "single",
+      "roundTripMs": 105.66880000000037,
+      "runtimeReportedMs": 30.299425125122
+    },
+    {
+      "action": "single",
+      "roundTripMs": 107.25619999999981,
+      "runtimeReportedMs": 30.015707015990998
+    },
+    {
+      "action": "single",
+      "roundTripMs": 108.13760000000002,
+      "runtimeReportedMs": 30.737400054932003
+    },
+    {
+      "action": "single",
+      "roundTripMs": 113.7469000000001,
+      "runtimeReportedMs": 35.666465759276996
+    },
+    {
+      "action": "single",
+      "roundTripMs": 109.14660000000003,
+      "runtimeReportedMs": 26.930809020996
+    },
+    {
+      "action": "single",
+      "roundTripMs": 112.91660000000002,
+      "runtimeReportedMs": 33.514738082886
+    },
+    {
+      "action": "single",
+      "roundTripMs": 115.36310000000003,
+      "runtimeReportedMs": 33.552408218383995
+    },
+    {
+      "action": "single",
+      "roundTripMs": 115.31460000000015,
+      "runtimeReportedMs": 32.157897949219
+    },
+    {
+      "action": "single",
+      "roundTripMs": 110.05789999999979,
+      "runtimeReportedMs": 30.043840408325
+    },
+    {
+      "action": "single",
+      "roundTripMs": 110.04490000000033,
+      "runtimeReportedMs": 28.350591659545998
+    },
+    {
+      "action": "single",
+      "roundTripMs": 111.0590000000002,
+      "runtimeReportedMs": 27.374267578125
+    },
+    {
+      "action": "single",
+      "roundTripMs": 111.43229999999994,
+      "runtimeReportedMs": 30.889272689819
+    },
+    {
+      "action": "single",
+      "roundTripMs": 101.23820000000023,
+      "runtimeReportedMs": 28.176069259644
+    },
+    {
+      "action": "single",
+      "roundTripMs": 106.7148000000002,
+      "runtimeReportedMs": 28.357982635497997
+    },
+    {
+      "action": "single",
+      "roundTripMs": 106.65340000000015,
+      "runtimeReportedMs": 28.152942657471
+    },
+    {
+      "action": "single",
+      "roundTripMs": 107.18010000000004,
+      "runtimeReportedMs": 29.080629348755
+    },
+    {
+      "action": "single",
+      "roundTripMs": 145.79160000000002,
+      "runtimeReportedMs": 43.667793273926
+    },
+    {
+      "action": "single",
+      "roundTripMs": 146.04110000000037,
+      "runtimeReportedMs": 38.543701171875
+    },
+    {
+      "action": "single",
+      "roundTripMs": 185.25369999999975,
+      "runtimeReportedMs": 26.059865951538
+    },
+    {
+      "action": "single",
+      "roundTripMs": 628.0367000000001,
+      "runtimeReportedMs": 43.59245300293
+    },
+    {
+      "action": "cleanup",
+      "roundTripMs": 115.15389999999934,
+      "runtimeReportedMs": 31.680583953857
+    }
+  ],
+  "setup": {
+    "seedRows": 1000,
+    "timer": "Date.now",
+    "sqlite": {
+      "unavailable": true,
+      "reason": "Failed to prepare query [1] not authorized to use function: sqlite_version"
+    },
+    "journalMode": {
+      "unavailable": true,
+      "reason": "Failed to prepare query [23] not authorized"
+    },
+    "synchronous": {
+      "unavailable": true,
+      "reason": "Failed to prepare query [23] not authorized"
+    }
+  },
+  "cleanup": {
+    "cleaned": true
+  },
+  "finishedAt": "2026-10-10T15:00:23.562Z"
+}

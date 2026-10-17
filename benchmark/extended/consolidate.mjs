@@ -1,0 +1,14 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {dirname,join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+const directory=join(dirname(fileURLToPath(import.meta.url)),'results');
+const read=async name=>JSON.parse(await readFile(join(directory,name),'utf8'));
+const raw=await read('raw.json'),supplement=await read('supplement.json'),boundaries=await read('query-boundaries.json');
+if(!boundaries.finalProbe||!supplement.finishedAt)throw new Error('Incomplete collection');
+const final={startedAt:raw.startedAt,finishedAt:boundaries.finishedAt,pilot:false,environments:{},cleanup:supplement.cleanup,productionBefore:raw.productionBefore,productionAfter:boundaries.finalProbe.garden,finalProbe:boundaries.finalProbe,deployedRevisionUnchanged:boundaries.deployedRevisionUnchanged,deployedSourcesUnchanged:boundaries.deployedSourcesUnchanged,queryBoundaries:boundaries,errors:supplement.errors,provenance:{nativeDatabase:'supplement.json: /var/tmp ext4, WAL/FULL',pureJavaScript:'raw.json: 30 timed blocks per task and environment; independent of database location',cloudDatabase:'raw.json: three completed rounds, failed large scans retained',concurrencyAndHttp:'supplement.json: bounded concurrency and outbound HTTP',queryBoundaries:'query-boundaries.json',exploratory:'raw.json and segment-*.json retain preliminary /tmp database and management API experiments. Do not pool their native DB timings with the persistent-disk control.'},observedLimits:[...(raw.observedLimits||[]),...raw.errors.map(error=>({error,scope:'developer management API, not bot throughput'}))]};
+for(const alias of ['fi','de'])final.environments[alias]={...supplement.environments[alias],pure:raw.environments[alias].pure,concurrencyScope:'SQLite worker threads, one independent connection per worker'};
+final.environments.telegram={...raw.environments.telegram,...supplement.environments.telegram};
+for(const alias of ['fi','de'])if(final.environments[alias].filesystem.filesystems[0].fstype==='tmpfs')throw new Error('RAM storage in final DB comparison');
+if(final.errors.length||!Object.values(final.cleanup).every(x=>x.cleaned)||final.finalProbe.temporaryTables.length||!final.deployedRevisionUnchanged||!final.deployedSourcesUnchanged||final.productionBefore.waters!==final.productionAfter.waters)throw new Error('Final integrity check failed');
+await writeFile(join(directory,'consolidated.json'),JSON.stringify(final,null,2));
+console.log('Consolidated completed phases; exploratory measurements remain separate.');

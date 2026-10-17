@@ -1,0 +1,109 @@
+{
+  "startedAt": "2026-10-17T19:13:29.493Z",
+  "telegram": {
+    "write": {
+      "rows10000": {
+        "before": 0,
+        "after": 10000,
+        "affected": 10000
+      },
+      "rows10001": {
+        "before": 0,
+        "after": 0,
+        "error": "Sqlite query rows_written limit exceeded"
+      },
+      "twoStatements": {
+        "rows": 12000
+      },
+      "cleaned": true
+    },
+    "read": {
+      "rows1": {
+        "result": {
+          "total": 1
+        }
+      },
+      "rows9999": {
+        "result": {
+          "total": 49995000
+        }
+      },
+      "rows10000": {
+        "result": {
+          "total": 50005000
+        }
+      },
+      "rows10001": {
+        "result": {
+          "total": 50015001
+        }
+      },
+      "rows19999": {
+        "result": {
+          "total": 199990000
+        }
+      },
+      "rows20000": {
+        "result": {
+          "total": 200010000
+        }
+      },
+      "rows20001": {
+        "result": {
+          "total": 200030001
+        }
+      },
+      "rows49999": {
+        "result": {
+          "total": 1249975000
+        }
+      },
+      "rows50000": {
+        "result": {
+          "total": 1250025000
+        }
+      },
+      "rows50001": {
+        "error": "Sqlite query rows_read limit exceeded"
+      },
+      "rows99999": {
+        "error": "Sqlite query rows_read limit exceeded"
+      },
+      "rows100000": {
+        "error": "Sqlite query rows_read limit exceeded"
+      },
+      "rows100001": {
+        "error": "Sqlite query rows_read limit exceeded"
+      },
+      "indexedLookup": {
+        "value": 100001
+      },
+      "cleaned": true
+    }
+  },
+  "native": {
+    "fi": {
+      "sqlite": "3.46.1",
+      "writes": {
+        "10000": 10000,
+        "10001": 10001
+      }
+    },
+    "de": {
+      "sqlite": "3.37.2",
+      "writes": {
+        "10000": 10000,
+        "10001": 10001
+      }
+    }
+  },
+  "finishedAt": "2026-10-17T19:13:57.503Z",
+  "finalProbe": {
+    "garden": {
+      "waters": 18
+    },
+    "temporaryTables": []
+  },
+  "deployedRevisionUnchanged": true,
+  "deployedSourcesUnchanged": true
+}

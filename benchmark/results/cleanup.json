@@ -1,0 +1,13 @@
+{
+  "result": {
+    "removed": [
+      "lab_bench_gardens_mv2isirv",
+      "lab_bench_events_mv2isirv"
+    ],
+    "gardenWatersBefore": 18,
+    "gardenWatersAfter": 18,
+    "remaining": []
+  },
+  "time": 0.040961980819702,
+  "log": []
+}
