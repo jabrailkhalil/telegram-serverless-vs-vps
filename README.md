@@ -87,3 +87,6 @@ References: [Telegram Serverless](https://core.telegram.org/bots/serverless), [M
 
 - [Русская статья на Хабре](https://habr.com/ru/articles/1095716/)
 - [English article on DEV](https://dev.to/jabrailkhalil/telegram-serverless-vs-two-vpss-what-the-benchmarks-actually-show-44p8)
+- [English republication on Medium](https://medium.com/@jabrailkhalil/telegram-offered-free-hosting-i-still-kept-my-two-vpss-6f2505377080)
+
+HackerNoon: submitted to editorial review; no public article URL yet.
